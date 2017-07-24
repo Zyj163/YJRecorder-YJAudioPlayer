@@ -8,7 +8,7 @@
 
 #import "YJAudioSessionManager.h"
 
-#import <AVFoundation/AVAudioSession.h>
+#import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <UIKit/UIKit.h>
 
@@ -81,7 +81,10 @@ YJSingleton_m(instance)
 {
     [self.delegates enumerateObjectsUsingBlock:^(id<YJAudioSessionDelegate> obj, BOOL * _Nonnull stop) {
         if ([obj respondsToSelector:sel]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             [obj performSelector:sel withObject:parm];
+#pragma clang diagnostic pop
         }
     }];
 }
@@ -141,7 +144,11 @@ YJSingleton_m(instance)
 #if TARGET_IPHONE_SIMULATOR
     return NO;
 #endif
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
     AVAudioSessionPortDescription *output = [[AVAudioSession sharedInstance] currentRoute].outputs.lastObject;
+#pragma clang diagnostic pop
     
     BOOL hasHeadset = NO;
     if(!output)

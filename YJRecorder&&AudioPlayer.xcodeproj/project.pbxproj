@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3557FE411F259E3800D16AF7 /* YJTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3557FE401F259E3800D16AF7 /* YJTool.m */; };
+		355D78941F25C00200F39357 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 355D78931F25C00200F39357 /* libmp3lame.a */; };
 		57961DA91D767E4F002F3D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57961DA81D767E4F002F3D4E /* main.m */; };
 		57961DAC1D767E4F002F3D4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57961DAB1D767E4F002F3D4E /* AppDelegate.m */; };
 		57961DAF1D767E4F002F3D4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57961DAE1D767E4F002F3D4E /* ViewController.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3557FE3F1F259E3800D16AF7 /* YJTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTool.h; sourceTree = "<group>"; };
+		3557FE401F259E3800D16AF7 /* YJTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTool.m; sourceTree = "<group>"; };
+		355D78921F25C00200F39357 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		355D78931F25C00200F39357 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		57961DA41D767E4F002F3D4E /* YJRecorder&&AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YJRecorder&&AudioPlayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57961DA81D767E4F002F3D4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57961DAA1D767E4F002F3D4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355D78941F25C00200F39357 /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,12 +100,16 @@
 		57961DBE1D767E6F002F3D4E /* YJRecorder&&YJAudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				355D78921F25C00200F39357 /* lame.h */,
+				355D78931F25C00200F39357 /* libmp3lame.a */,
 				57961DC01D767ECB002F3D4E /* YJAudioSessionManager.h */,
 				57961DC11D767ECB002F3D4E /* YJAudioSessionManager.m */,
 				57961DC31D767ED9002F3D4E /* YJRecorder.h */,
 				57961DC41D767ED9002F3D4E /* YJRecorder.m */,
 				57961DC71D767FF1002F3D4E /* YJAudioPlayer.h */,
 				57961DC81D767FF1002F3D4E /* YJAudioPlayer.m */,
+				3557FE3F1F259E3800D16AF7 /* YJTool.h */,
+				3557FE401F259E3800D16AF7 /* YJTool.m */,
 				57961DC61D767F1F002F3D4E /* YJSingleton.h */,
 			);
 			path = "YJRecorder&&YJAudioPlayer";
@@ -130,7 +141,7 @@
 		57961D9C1D767E4F002F3D4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "张永俊";
 				TargetAttributes = {
 					57961DA31D767E4F002F3D4E = {
@@ -180,6 +191,7 @@
 				57961DAC1D767E4F002F3D4E /* AppDelegate.m in Sources */,
 				57961DC51D767ED9002F3D4E /* YJRecorder.m in Sources */,
 				57961DC21D767ECB002F3D4E /* YJAudioSessionManager.m in Sources */,
+				3557FE411F259E3800D16AF7 /* YJTool.m in Sources */,
 				57961DA91D767E4F002F3D4E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,8 +232,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -265,8 +279,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -299,6 +315,10 @@
 				INFOPLIST_FILE = "YJRecorder&&AudioPlayer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YJRecorder&&AudioPlayer/YJRecorder&&YJAudioPlayer",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ddn.YJRecorder--AudioPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -314,6 +334,10 @@
 				INFOPLIST_FILE = "YJRecorder&&AudioPlayer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YJRecorder&&AudioPlayer/YJRecorder&&YJAudioPlayer",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ddn.YJRecorder--AudioPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
